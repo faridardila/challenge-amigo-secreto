@@ -43,5 +43,5 @@ function sortearAmigo() {
   const nombreGanador = nombresLista[indice];
 
   const resultado = document.getElementById("resultado");
-  resultado.innerHTML = "El ganador es: " + nombreGanador;
+  resultado.innerHTML = "El amigo secreto sorteado es " + nombreGanador;
 }
