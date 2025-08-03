@@ -3,10 +3,10 @@
 let nombresLista =[];
 
 function agregarAmigo(){
-  let input = document.getElementById("amigo");
-  let nombre = input.value;
+  const input = document.getElementById("amigo");
+  const nombre = input.value.trim();
 
-  if(nombre == ""){
+  if(nombre === ""){
     alert("Por favor, inserte un nombre.");
     return;
   }
@@ -23,10 +23,10 @@ function agregarAmigo(){
 }
 
 function actualizarLista(){
-  let lista = document.getElementById("listaAmigos");
+  const lista = document.getElementById("listaAmigos");
   lista.innerHTML = "";
-  nombresLista.forEach(function(nombre) {
-    let li = document.createElement("li");
+  nombresLista.forEach((nombre) => {
+    const li = document.createElement("li");
     li.textContent = nombre;
     lista.appendChild(li);
   });
@@ -38,10 +38,10 @@ function sortearAmigo() {
     return;
   }
 
-  let cantidadAmigos = nombresLista.length;
-  let indice = Math.floor(Math.random() * cantidadAmigos);
-  let nombreGanador = nombresLista[indice];
+  const cantidadAmigos = nombresLista.length;
+  const indice = Math.floor(Math.random() * cantidadAmigos);
+  const nombreGanador = nombresLista[indice];
 
-  let resultado = document.getElementById("resultado");
+  const resultado = document.getElementById("resultado");
   resultado.innerHTML = "El ganador es: " + nombreGanador;
 }
